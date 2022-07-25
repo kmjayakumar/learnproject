@@ -19,7 +19,7 @@ class CreatePostsTable extends Migration
             $table->integer('age');
             $table->string('gender');
             $table->string('address');
-            $table->integer('phone');
+            $table->string('phone');
             $table->timestamps();
         });
     }
