@@ -20,7 +20,7 @@
 			<div class="col-md-4 col-sm-4"></div>
     		<div class="form-group col-md-4">
     			<label for="age">Age:</label>
-      			<input type="text" oninput="numberOnly(this.id);" maxlength="3" minlength="1" min="1" max="135" id="age" class="form-control" name="age" placeholder="Age" required maxlength="3">
+      			<input type="text" oninput="numberOnly(this.id);" maxlength="3" minlength="1" min="1" max="135" id="age" class="form-control" name="age" placeholder="Age" required >
     		</div>
 		</div>
 		<div class="row">
@@ -45,7 +45,10 @@
 			<div class="col-md-4 col-sm-4"></div>
     		<div class="form-group col-md-4">
 	    		<label for="phone">Phone No.:</label>
-	      		<input type="tel" class="form-control" name="phone" placeholder="Phone Number" required >
+	      		<!-- <input type="phone" class="form-control" name="phone" placeholder="Phone Number" required oninput="numberOnly(this.id);" maxlength="10"> -->
+	      		<input type="text" 
+onkeypress="if ( isNaN(this.value + String.fromCharCode(event.keyCode) )) return false;"
+ class="form-control" name="phone" placeholder="Phone Number">
     		</div>
     	</div>
     	<div>
