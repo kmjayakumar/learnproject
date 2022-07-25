@@ -20,7 +20,7 @@
 			<div class="col-md-4 col-sm-4"></div>
     		<div class="form-group col-md-4">
     			<label for="age">Age:</label>
-      			<input type="number" oninput="numberOnly(this.id);" maxlength="3" minlength="1" min="1" max="135" id="age" class="form-control" name="age" placeholder="Age" required >
+      			<input type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="3" minlength="1" min="1" max="135" id="age" class="form-control" name="age" placeholder="Age" required >
     		</div>
 		</div>
 		<div class="row">
