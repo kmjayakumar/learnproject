@@ -48,7 +48,7 @@
 			<div class="col-md-4 col-sm-4"></div>
     		<div class="form-group col-md-4">
 	    		<label for="phone">Phone No.:</label>
-	    		<input type="text" onkeypress="if ( isNaN(this.value + String.fromCharCode(event.keyCode) )) return false;" class="form-control" name="phone" placeholder="Phone Number" value="{{$posts->phone}}" >
+	    		<input type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" class="form-control" name="phone" placeholder="Phone Number" value="{{$posts->phone}}" maxlength="10" >
 	      		<!-- <input type="number" class="form-control" name="phone" placeholder="Phone Number" value="{{$posts->phone}}"> -->
     		</div>
     	</div>
