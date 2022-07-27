@@ -23,7 +23,7 @@
 			<div class="col-md-4 col-sm-4"></div>
     		<div class="form-group col-md-4">
     			<label for="age">Age:</label>
-    			<input type="text" oninput="numberOnly(this.id);" maxlength="3" minlength="1" min="1" max="135" id="age" class="form-control" name="age" placeholder="Age" required maxlength="3" value="{{$posts->age}}">
+    			<input type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="3" minlength="1" min="1" max="135" id="age" class="form-control" name="age" placeholder="Age" required maxlength="3" value="{{$posts->age}}">
     		</div>
 		</div>
 		<div class="row">
@@ -48,7 +48,7 @@
 			<div class="col-md-4 col-sm-4"></div>
     		<div class="form-group col-md-4">
 	    		<label for="phone">Phone No.:</label>
-	    		<input type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" class="form-control" name="phone" placeholder="Phone Number" value="{{$posts->phone}}" maxlength="10" >
+	    		<input type="number" oninput="javascript: if (this.value.length > this.minLength) this.value = this.value.slice(0, this.minLength);" class="form-control" name="phone" placeholder="Phone Number" value="{{$posts->phone}}" minlength="10" >
 	      		<!-- <input type="number" class="form-control" name="phone" placeholder="Phone Number" value="{{$posts->phone}}"> -->
     		</div>
     	</div>
