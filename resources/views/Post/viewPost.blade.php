@@ -48,7 +48,8 @@
 				<button type="button" class="btn btn-success"><a href="/addPost" style="text-decoration: none; color: white;">Add</a></button>
 				<button type="button" class="btn btn-warning"><a href="/editPost/{{$post->id}}" style="text-decoration: none; color: white;">Edit</a></button>
 				
-				<button type="button" class="btn btn-danger"><a href="/deletePost/{{$post->id}}" style="text-decoration: none; color: white;">Delete</a></button>
+				<!-- <button type="button" class="btn btn-danger"><a href="/deletePost/{{$post->id}}" style="text-decoration: none; color: white;">Delete</a></button> -->
+				<button type="button" class="btn btn-danger"><a href="/deletePost/{{$post->id}}" style="text-decoration: none; color: white;" onclick="return confirm(' you want to delete?');">Delete</a></button>
 
 			</td>
 		</tr>
